@@ -1,0 +1,36 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "orchestrator": "cross-env KAFKA_BROKER=localhost:9092 tsx orchestrator/index.ts",
+    "topics:init": "cross-env KAFKA_BROKER=localhost:9092 tsx scripts/create-topics.ts",
+   "quick:produce": "cross-env KAFKA_BROKER=localhost:9092 tsx scripts/quick-produce.ts",
+   "quick:consume": "cross-env KAFKA_BROKER=localhost:9092 tsx scripts/quick-consume.ts",
+   "quick:consume:one": "cross-env KAFKA_BROKER=localhost:9092 TXN_ID=f956507e-fd99-413e-83a7-ddbbc4d9b96f tsx scripts/quick-consume.ts"
+
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "next": "16.0.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.0",
+    "tailwindcss": "^4",
+    "tsx": "^4.20.6",
+    "typescript": "^5"
+  }
+}

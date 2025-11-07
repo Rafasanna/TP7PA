@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* 🎨 Paleta base */
+:root {
+  --background: #fff7f9;          /* fondo rosado muy claro */
+  --foreground: #2b2b2b;          /* texto gris oscuro */
+  --accent: #f9a8d4;              /* rosa pastel */
+  --accent-hover: #f472b6;        /* rosa más intenso */
+  --highlight: #fce7f3;           /* resaltado */
+  --card-bg: #ffffffd9;           /* tarjetas translúcidas */
+}
+
+/* 🌙 Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1a1f;
+    --foreground: #f8fafc;
+    --accent: #f9a8d4;
+    --accent-hover: #f472b6;
+    --highlight: #4a044e;
+    --card-bg: #2b2b33d9;
+  }
+}
+
+/* ✨ Aplicación general */
+body {
+  background: linear-gradient(160deg, var(--background), #ffe4e6, #fce7f3);
+  color: var(--foreground);
+  font-family: 'Inter', 'Poppins', 'Helvetica', sans-serif;
+  transition: all 0.3s ease;
+  min-height: 100vh;
+}
+
+/* 🌸 Inputs con efecto pastel */
+.input {
+  @apply w-full rounded-xl px-4 py-2 outline-none border transition;
+  background: var(--card-bg);
+  border: 1px solid var(--highlight);
+  color: var(--foreground);
+  box-shadow: 0 0 8px #f9a8d420;
+}
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+}
+
+/* 💖 Botón principal */
+.btn-primary {
+  @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold transition;
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 2px 10px #f9a8d470;
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 4px 14px #f472b670;
+  transform: translateY(-2px);
+}
+
+/* 🩶 Botón secundario */
+.btn-ghost {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition border;
+  border-color: var(--highlight);
+  color: var(--foreground);
+  background: var(--card-bg);
+}
+.btn-ghost:hover {
+  background: var(--highlight);
+  color: #4a044e;
+  box-shadow: 0 0 8px #f9a8d420;
+}
+
+/* 💫 Tarjetas (si tenés divs o paneles de datos) */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--highlight);
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px #f9a8d430;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+/* 💅 Animaciones suaves */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🚫 Ocultar indicador de desarrollo Next.js */
+#__next-build-watcher,
+nextjs-portal,
+[id^="__next"],
+[class*="__next"] {
+  display: none !important;
+}
+
