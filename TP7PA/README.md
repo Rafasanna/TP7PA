@@ -102,7 +102,5 @@ Abrir 👉 http://localhost:3000/
 ✔ Aprobación/reversión automática basada en análisis de fraude
 
 ✅ Autor
-
-Luca Saboredo
 Licenciatura en Sistemas – UADER
 2025
