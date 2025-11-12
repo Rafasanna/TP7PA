@@ -2,7 +2,7 @@
 Sistema de Eventos Bancarios
 Trabajo Práctico Final – Programación Avanzada
 
-Autor: Luca Saboredo – UADER – 2025
+Autor:  – UADER – 2025
 
 📌 Introducción
 
